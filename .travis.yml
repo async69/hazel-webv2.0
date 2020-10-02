@@ -1,4 +1,9 @@
 language: node_js
 scripts:
-  echo ***Running Build**
-  yarn build
+  - echo '***Build Starts***'
+  - echo '***Installing Dependencies'
+  - yarn install
+  - echo "***Running Tests***"
+  - yarn test
+  - yarn run coveralls
+  - yarn build
